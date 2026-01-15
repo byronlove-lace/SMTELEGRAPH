@@ -1,5 +1,4 @@
-#include "include/stm32f411xe.h"
-#include <stdint.h>
+#include "../include/main.h"
 
 int main(void) {
   // Enable clock access to GPIOA
