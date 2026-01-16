@@ -2,7 +2,6 @@
 ENTRY(Reset_Handler)
 
 /* Available Memory */
-/*NOTE: CONFIRM THIS IN DOCS */
 MEMORY
 {
   FLASH(rx) :ORIGIN = 0x08000000,LENGTH =512K

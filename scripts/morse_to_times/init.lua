@@ -1,5 +1,5 @@
 local json = require("lib.json")
-local file_io = require("utils/file_io")
+local file_io = require("utils.file_io")
 
 local getScriptDir = function()
 	local str = debug.getinfo(2, "S").source:sub(2)
