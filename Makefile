@@ -21,14 +21,17 @@ TARGET_ELF = bin/main.elf
 TARGET_BIN = bin/main.bin
 
 ## OpenOCD Paths
-DEBUGGER=interface/stlink-v2-1.cfg
+DEBUGGER=interface/stlink.cfg
 BOARD=board/st_nucleo_f4.cfg
 
 # COMMANDS
 build: $(TARGET_ELF)
 
 load:
-	openocd -f $(DEBUGGER) -f $(BOARD)
+	openocd -d -f $(DEBUGGER) -f $(BOARD) | tee logs/openocd.log
+
+debug:
+	gdb -ex "target extended-remote :3333" $(TARGET_ELF)
 
 clean:
 	rm -f $(STARTUP_OBJ) $(MAIN_OBJ) $(MAIN_MAP) $(TARGET_ELF)
