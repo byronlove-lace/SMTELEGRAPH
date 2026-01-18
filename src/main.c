@@ -11,6 +11,7 @@ int main(void) {
   // Superloop
   while (1) {
     // Set PA5 (LED Pin) to high
-    GPIOA->ODR |= GPIO_ODR_ODR_5;
+    GPIOA->ODR ^= GPIO_ODR_ODR_5;
+		for(int i = 0; i < 100000; i++){}
   }
 }
