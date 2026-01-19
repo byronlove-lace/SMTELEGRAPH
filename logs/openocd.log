@@ -1,0 +1,308 @@
+Open On-Chip Debugger 0.12.0
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+User : 3 1 options.c:52 configuration_output_handler(): debug_level: 3
+User : 4 1 options.c:52 configuration_output_handler(): 
+Debug: 5 1 options.c:233 add_default_dirs(): bindir=/usr/bin
+Debug: 6 1 options.c:234 add_default_dirs(): pkgdatadir=/usr/share/openocd
+Debug: 7 1 options.c:235 add_default_dirs(): exepath=/usr/bin
+Debug: 8 1 options.c:236 add_default_dirs(): bin2data=../share/openocd
+Debug: 9 1 configuration.c:33 add_script_search_dir(): adding /home/jahn/.config/openocd
+Debug: 10 1 configuration.c:33 add_script_search_dir(): adding /home/jahn/.openocd
+Debug: 11 1 configuration.c:33 add_script_search_dir(): adding /usr/bin/../share/openocd/site
+Debug: 12 1 configuration.c:33 add_script_search_dir(): adding /usr/bin/../share/openocd/scripts
+Debug: 13 1 command.c:155 script_debug(): command - ocd_find interface/stlink.cfg
+Debug: 14 1 configuration.c:88 find_file(): found /usr/bin/../share/openocd/scripts/interface/stlink.cfg
+Debug: 15 2 command.c:155 script_debug(): command - adapter driver hla
+Debug: 16 2 command.c:155 script_debug(): command - hla_layout stlink
+Debug: 17 2 hla_interface.c:230 hl_interface_handle_layout_command(): hl_interface_handle_layout_command
+Debug: 18 2 command.c:155 script_debug(): command - hla_device_desc ST-LINK
+Debug: 19 2 hla_interface.c:217 hl_interface_handle_device_desc_command(): hl_interface_handle_device_desc_command
+Debug: 20 2 command.c:155 script_debug(): command - hla_vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753 0x0483 0x3754
+Debug: 21 2 command.c:155 script_debug(): command - ocd_find board/st_nucleo_f4.cfg
+Debug: 22 2 configuration.c:88 find_file(): found /usr/bin/../share/openocd/scripts/board/st_nucleo_f4.cfg
+Debug: 23 2 command.c:155 script_debug(): command - ocd_find interface/stlink.cfg
+Debug: 24 2 configuration.c:88 find_file(): found /usr/bin/../share/openocd/scripts/interface/stlink.cfg
+Debug: 25 2 command.c:155 script_debug(): command - adapter driver hla
+Warn : 26 2 adapter.c:435 handle_adapter_driver_command(): Interface already configured, ignoring
+Debug: 27 2 command.c:155 script_debug(): command - hla_layout stlink
+Debug: 28 2 hla_interface.c:230 hl_interface_handle_layout_command(): hl_interface_handle_layout_command
+Error: 29 2 hla_interface.c:238 hl_interface_handle_layout_command(): already specified hl_layout stlink
+Debug: 30 2 command.c:155 script_debug(): command - hla_device_desc ST-LINK
+Debug: 31 2 hla_interface.c:217 hl_interface_handle_device_desc_command(): hl_interface_handle_device_desc_command
+Debug: 32 2 command.c:155 script_debug(): command - hla_vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753 0x0483 0x3754
+Debug: 33 2 command.c:155 script_debug(): command - transport select hla_swd
+Debug: 34 2 hla_transport.c:191 hl_swd_transport_select(): hl_swd_transport_select
+Debug: 35 2 command.c:155 script_debug(): command - ocd_find target/stm32f4x.cfg
+Debug: 36 2 configuration.c:88 find_file(): found /usr/bin/../share/openocd/scripts/target/stm32f4x.cfg
+Debug: 37 2 command.c:155 script_debug(): command - ocd_find target/swj-dp.tcl
+Debug: 38 2 configuration.c:88 find_file(): found /usr/bin/../share/openocd/scripts/target/swj-dp.tcl
+Debug: 39 2 command.c:155 script_debug(): command - transport select
+Debug: 40 2 command.c:155 script_debug(): command - ocd_find mem_helper.tcl
+Debug: 41 2 configuration.c:88 find_file(): found /usr/bin/../share/openocd/scripts/mem_helper.tcl
+Debug: 42 2 command.c:155 script_debug(): command - add_usage_text mrw address
+Debug: 43 2 command.c:155 script_debug(): command - add_help_text mrw Returns value of word in memory.
+Debug: 44 2 command.c:155 script_debug(): command - add_usage_text mrh address
+Debug: 45 2 command.c:155 script_debug(): command - add_help_text mrh Returns value of halfword in memory.
+Debug: 46 2 command.c:155 script_debug(): command - add_usage_text mrb address
+Debug: 47 2 command.c:155 script_debug(): command - add_help_text mrb Returns value of byte in memory.
+Debug: 48 2 command.c:155 script_debug(): command - add_usage_text mmw address setbits clearbits
+Debug: 49 2 command.c:155 script_debug(): command - add_help_text mmw Modify word in memory. new_val = (old_val & ~clearbits) | setbits;
+Debug: 50 2 command.c:155 script_debug(): command - transport select
+Debug: 51 2 command.c:155 script_debug(): command - transport select
+Debug: 52 2 command.c:155 script_debug(): command - transport select
+Debug: 53 2 command.c:155 script_debug(): command - swd newdap stm32f4x cpu -irlen 4 -ircapture 0x1 -irmask 0xf -expected-id 0x2ba01477
+Debug: 54 2 hla_tcl.c:101 jim_hl_newtap_cmd(): Creating New Tap, Chip: stm32f4x, Tap: cpu, Dotted: stm32f4x.cpu, 8 params
+Debug: 55 2 hla_tcl.c:112 jim_hl_newtap_cmd(): Processing option: -irlen
+Debug: 56 2 hla_tcl.c:112 jim_hl_newtap_cmd(): Processing option: -ircapture
+Debug: 57 2 hla_tcl.c:112 jim_hl_newtap_cmd(): Processing option: -irmask
+Debug: 58 2 hla_tcl.c:112 jim_hl_newtap_cmd(): Processing option: -expected-id
+Debug: 59 2 core.c:1474 jtag_tap_init(): Created Tap: stm32f4x.cpu @ abs position 0, irlen 0, capture: 0x0 mask: 0x0
+Debug: 60 2 command.c:155 script_debug(): command - dap create stm32f4x.dap -chain-position stm32f4x.cpu
+Debug: 61 2 command.c:155 script_debug(): command - transport select
+Debug: 62 2 command.c:155 script_debug(): command - target create stm32f4x.cpu cortex_m -endian little -dap stm32f4x.dap
+Info : 63 2 target.c:6205 target_create(): The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+Debug: 64 2 hla_target.c:193 adapter_target_create(): adapter_target_create
+Debug: 65 2 hla_target.c:163 adapter_init_arch_info(): adapter_init_arch_info
+Debug: 66 2 command.c:289 register_command(): command 'rtt' is already registered
+Debug: 67 2 command.c:289 register_command(): command 'tpiu' is already registered
+Debug: 68 2 command.c:155 script_debug(): command - stm32f4x.cpu configure -work-area-phys 0x20000000 -work-area-size 0x8000 -work-area-backup 0
+Debug: 69 2 target.c:2199 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 70 2 target.c:2199 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 71 3 target.c:2199 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 72 3 command.c:155 script_debug(): command - flash bank stm32f4x.flash stm32f2x 0 0 0 0 stm32f4x.cpu
+Debug: 73 3 tcl.c:1305 handle_flash_bank_command(): 'stm32f2x' driver usage field missing
+Debug: 74 3 command.c:155 script_debug(): command - flash bank stm32f4x.otp stm32f2x 0x1fff7800 0 0 0 stm32f4x.cpu
+Debug: 75 3 command.c:289 register_command(): command 'stm32f2x' is already registered
+Debug: 76 3 command.c:289 register_command(): command 'stm32f2x lock' is already registered
+Debug: 77 3 command.c:289 register_command(): command 'stm32f2x unlock' is already registered
+Debug: 78 3 command.c:289 register_command(): command 'stm32f2x mass_erase' is already registered
+Debug: 79 3 command.c:289 register_command(): command 'stm32f2x options_read' is already registered
+Debug: 80 3 command.c:289 register_command(): command 'stm32f2x options_write' is already registered
+Debug: 81 3 command.c:289 register_command(): command 'stm32f2x optcr2_write' is already registered
+Debug: 82 3 command.c:289 register_command(): command 'stm32f2x otp' is already registered
+Debug: 83 3 tcl.c:1305 handle_flash_bank_command(): 'stm32f2x' driver usage field missing
+Debug: 84 3 command.c:155 script_debug(): command - adapter speed 2000
+Debug: 85 3 adapter.c:251 adapter_config_khz(): handle adapter khz
+Debug: 86 3 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 87 3 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 88 3 command.c:155 script_debug(): command - adapter srst delay 100
+Debug: 89 3 command.c:155 script_debug(): command - transport select
+Debug: 90 3 command.c:155 script_debug(): command - reset_config srst_nogate
+Debug: 91 3 command.c:155 script_debug(): command - transport select
+Debug: 92 3 command.c:155 script_debug(): command - stm32f4x.cpu configure -event examine-end 
+	# Enable debug during low power modes (uses more power)
+	# DBGMCU_CR |= DBG_STANDBY | DBG_STOP | DBG_SLEEP
+	mmw 0xE0042004 0x00000007 0
+
+	# Stop watchdog counters during halt
+	# DBGMCU_APB1_FZ |= DBG_IWDG_STOP | DBG_WWDG_STOP
+	mmw 0xE0042008 0x00001800 0
+
+Debug: 93 3 command.c:155 script_debug(): command - tpiu create stm32f4x.tpiu -dap stm32f4x.dap -ap-num 0 -baseaddr 0xE0040000
+Debug: 94 3 command.c:155 script_debug(): command - stm32f4x.tpiu configure -event pre-enable _proc_pre_enable_stm32f4x.tpiu stm32f4x
+Debug: 95 3 command.c:155 script_debug(): command - stm32f4x.cpu configure -event reset-init 
+	# Configure PLL to boost clock to HSI x 4 (64 MHz)
+	mww 0x40023804 0x08012008   ;# RCC_PLLCFGR 16 Mhz /8 (M) * 128 (N) /4(P)
+	mww 0x40023C00 0x00000102   ;# FLASH_ACR = PRFTBE | 2(Latency)
+	mmw 0x40023800 0x01000000 0 ;# RCC_CR |= PLLON
+	sleep 10                    ;# Wait for PLL to lock
+	mmw 0x40023808 0x00001000 0 ;# RCC_CFGR |= RCC_CFGR_PPRE1_DIV2
+	mmw 0x40023808 0x00000002 0 ;# RCC_CFGR |= RCC_CFGR_SW_PLL
+
+	# Boost JTAG frequency
+	adapter speed 8000
+
+Debug: 96 3 command.c:155 script_debug(): command - stm32f4x.cpu configure -event reset-start 
+	# Reduce speed since CPU speed will slow down to 16MHz with the reset
+	adapter speed 2000
+
+Debug: 97 3 command.c:155 script_debug(): command - reset_config srst_only
+User : 98 3 options.c:52 configuration_output_handler(): srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+User : 99 3 options.c:52 configuration_output_handler(): 
+Info : 100 3 server.c:297 add_service(): Listening on port 6666 for tcl connections
+Info : 101 3 server.c:297 add_service(): Listening on port 4444 for telnet connections
+Debug: 102 3 command.c:155 script_debug(): command - init
+Debug: 103 3 command.c:155 script_debug(): command - target init
+Debug: 104 3 command.c:155 script_debug(): command - target names
+Debug: 105 3 command.c:155 script_debug(): command - stm32f4x.cpu cget -event gdb-flash-erase-start
+Debug: 106 3 command.c:155 script_debug(): command - stm32f4x.cpu configure -event gdb-flash-erase-start reset init
+Debug: 107 3 command.c:155 script_debug(): command - stm32f4x.cpu cget -event gdb-flash-write-end
+Debug: 108 3 command.c:155 script_debug(): command - stm32f4x.cpu configure -event gdb-flash-write-end reset halt
+Debug: 109 3 command.c:155 script_debug(): command - stm32f4x.cpu cget -event gdb-attach
+Debug: 110 3 command.c:155 script_debug(): command - stm32f4x.cpu configure -event gdb-attach halt 1000
+Debug: 111 3 target.c:1657 handle_target_init_command(): Initializing targets...
+Debug: 112 3 hla_target.c:183 adapter_init_target(): adapter_init_target
+Debug: 113 3 semihosting_common.c:109 semihosting_common_init():  
+Debug: 114 3 hla_interface.c:111 hl_interface_init(): hl_interface_init
+Debug: 115 3 hla_layout.c:84 hl_layout_init(): hl_layout_init
+Debug: 116 3 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 117 3 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 118 3 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 119 3 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Info : 120 3 adapter.c:179 adapter_init(): clock speed 2000 kHz
+Debug: 121 3 openocd.c:134 handle_init_command(): Debug Adapter init complete
+Debug: 122 3 command.c:155 script_debug(): command - transport init
+Debug: 123 3 transport.c:219 handle_transport_init(): handle_transport_init
+Debug: 124 3 hla_transport.c:143 hl_transport_init(): hl_transport_init
+Debug: 125 3 hla_transport.c:160 hl_transport_init(): current transport hla_swd
+Debug: 126 3 hla_interface.c:44 hl_interface_open(): hl_interface_open
+Debug: 127 3 hla_layout.c:29 hl_layout_open(): hl_layout_open
+Debug: 128 3 stlink_usb.c:3693 stlink_open(): stlink_open
+Debug: 129 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3744 serial: 
+Debug: 130 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3748 serial: 
+Debug: 131 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374b serial: 
+Debug: 132 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374d serial: 
+Debug: 133 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374e serial: 
+Debug: 134 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374f serial: 
+Debug: 135 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3752 serial: 
+Debug: 136 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3753 serial: 
+Debug: 137 3 stlink_usb.c:3705 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3754 serial: 
+Info : 138 6 stlink_usb.c:1434 stlink_usb_version(): STLINK V2J47M34 (API v2) VID:PID 0483:374B
+Debug: 139 6 stlink_usb.c:1659 stlink_usb_exit_mode(): MODE: 0x01
+Info : 140 6 stlink_usb.c:1470 stlink_usb_check_voltage(): Target voltage: 3.250593
+Debug: 141 6 stlink_usb.c:1727 stlink_usb_init_mode(): MODE: 0x01
+Debug: 142 6 stlink_usb.c:3093 stlink_dump_speed_map(): Supported clock speeds are:
+Debug: 143 6 stlink_usb.c:3096 stlink_dump_speed_map(): 4000 kHz
+Debug: 144 6 stlink_usb.c:3096 stlink_dump_speed_map(): 1800 kHz
+Debug: 145 6 stlink_usb.c:3096 stlink_dump_speed_map(): 1200 kHz
+Debug: 146 6 stlink_usb.c:3096 stlink_dump_speed_map(): 950 kHz
+Debug: 147 6 stlink_usb.c:3096 stlink_dump_speed_map(): 480 kHz
+Debug: 148 6 stlink_usb.c:3096 stlink_dump_speed_map(): 240 kHz
+Debug: 149 6 stlink_usb.c:3096 stlink_dump_speed_map(): 125 kHz
+Debug: 150 6 stlink_usb.c:3096 stlink_dump_speed_map(): 100 kHz
+Debug: 151 6 stlink_usb.c:3096 stlink_dump_speed_map(): 50 kHz
+Debug: 152 6 stlink_usb.c:3096 stlink_dump_speed_map(): 25 kHz
+Debug: 153 6 stlink_usb.c:3096 stlink_dump_speed_map(): 15 kHz
+Debug: 154 6 stlink_usb.c:3096 stlink_dump_speed_map(): 5 kHz
+Debug: 155 8 stlink_usb.c:1787 stlink_usb_init_mode(): MODE: 0x02
+Debug: 156 8 stlink_usb.c:4088 stlink_usb_open_ap(): AP 0 enabled
+Debug: 157 8 stlink_usb.c:3781 stlink_open(): Using TAR autoincrement: 4096
+Debug: 158 8 core.c:640 adapter_system_reset(): SRST line released
+Debug: 159 109 hla_interface.c:69 hl_interface_init_target(): hl_interface_init_target
+Debug: 160 110 stlink_usb.c:2020 stlink_usb_idcode(): IDCODE: 0x2BA01477
+Debug: 161 110 command.c:155 script_debug(): command - dap init
+Debug: 162 110 arm_dap.c:97 dap_init_all(): Initializing all DAPs ...
+Debug: 163 110 openocd.c:151 handle_init_command(): Examining targets...
+Debug: 164 110 target.c:1843 target_call_event_callbacks(): target event 19 (examine-start) for core stm32f4x.cpu
+Debug: 165 110 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe000ed00 4 1
+Debug: 166 110 target.c:2628 target_read_u32(): address: 0xe000ed00, value: 0x410fc241
+Info : 167 110 cortex_m.c:2369 cortex_m_examine(): [stm32f4x.cpu] Cortex-M4 r0p1 processor detected
+Debug: 168 110 cortex_m.c:2384 cortex_m_examine(): [stm32f4x.cpu] cpuid: 0x410fc241
+Debug: 169 110 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe000ef40 4 1
+Debug: 170 110 target.c:2628 target_read_u32(): address: 0xe000ef40, value: 0x10110021
+Debug: 171 110 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe000ef44 4 1
+Debug: 172 111 target.c:2628 target_read_u32(): address: 0xe000ef44, value: 0x11000011
+Debug: 173 111 cortex_m.c:2392 cortex_m_examine(): [stm32f4x.cpu] Cortex-M4 floating point feature FPv4_SP found
+Debug: 174 111 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe000edf0 4 1
+Debug: 175 111 target.c:2628 target_read_u32(): address: 0xe000edf0, value: 0x00030003
+Debug: 176 111 target.c:2716 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 177 111 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe000edfc 4 1
+Debug: 178 111 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe0002000 4 1
+Debug: 179 111 target.c:2628 target_read_u32(): address: 0xe0002000, value: 0x00000260
+Debug: 180 111 target.c:2716 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 181 111 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0002008 4 1
+Debug: 182 112 target.c:2716 target_write_u32(): address: 0xe000200c, value: 0x00000000
+Debug: 183 112 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe000200c 4 1
+Debug: 184 112 target.c:2716 target_write_u32(): address: 0xe0002010, value: 0x00000000
+Debug: 185 112 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0002010 4 1
+Debug: 186 112 target.c:2716 target_write_u32(): address: 0xe0002014, value: 0x00000000
+Debug: 187 112 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0002014 4 1
+Debug: 188 113 target.c:2716 target_write_u32(): address: 0xe0002018, value: 0x00000000
+Debug: 189 113 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0002018 4 1
+Debug: 190 113 target.c:2716 target_write_u32(): address: 0xe000201c, value: 0x00000000
+Debug: 191 113 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe000201c 4 1
+Debug: 192 113 target.c:2716 target_write_u32(): address: 0xe0002020, value: 0x00000000
+Debug: 193 113 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0002020 4 1
+Debug: 194 114 target.c:2716 target_write_u32(): address: 0xe0002024, value: 0x00000000
+Debug: 195 114 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0002024 4 1
+Debug: 196 114 cortex_m.c:2488 cortex_m_examine(): [stm32f4x.cpu] FPB fpcr 0x260, numcode 6, numlit 2
+Debug: 197 114 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe0001000 4 1
+Debug: 198 114 target.c:2628 target_read_u32(): address: 0xe0001000, value: 0x40000000
+Debug: 199 114 cortex_m.c:2187 cortex_m_dwt_setup(): [stm32f4x.cpu] DWT_CTRL: 0x40000000
+Debug: 200 114 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe0001fbc 4 1
+Debug: 201 115 target.c:2628 target_read_u32(): address: 0xe0001fbc, value: 0x00000000
+Debug: 202 115 cortex_m.c:2194 cortex_m_dwt_setup(): [stm32f4x.cpu] DWT_DEVARCH: 0x0
+Debug: 203 115 target.c:2716 target_write_u32(): address: 0xe0001028, value: 0x00000000
+Debug: 204 115 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0001028 4 1
+Debug: 205 115 target.c:2716 target_write_u32(): address: 0xe0001038, value: 0x00000000
+Debug: 206 115 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0001038 4 1
+Debug: 207 115 target.c:2716 target_write_u32(): address: 0xe0001048, value: 0x00000000
+Debug: 208 115 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0001048 4 1
+Debug: 209 116 target.c:2716 target_write_u32(): address: 0xe0001058, value: 0x00000000
+Debug: 210 116 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0001058 4 1
+Debug: 211 116 cortex_m.c:2241 cortex_m_dwt_setup(): [stm32f4x.cpu] DWT dwtcr 0x40000000, comp 4, watch/trigger
+Info : 212 116 cortex_m.c:2498 cortex_m_examine(): [stm32f4x.cpu] target has 6 breakpoints, 4 watchpoints
+Debug: 213 116 target.c:1843 target_call_event_callbacks(): target event 21 (examine-end) for core stm32f4x.cpu
+Debug: 214 116 target.c:5099 target_handle_event(): target(0): stm32f4x.cpu (hla_target) event: 21 (examine-end) action: 
+	# Enable debug during low power modes (uses more power)
+	# DBGMCU_CR |= DBG_STANDBY | DBG_STOP | DBG_SLEEP
+	mmw 0xE0042004 0x00000007 0
+
+	# Stop watchdog counters during halt
+	# DBGMCU_APB1_FZ |= DBG_IWDG_STOP | DBG_WWDG_STOP
+	mmw 0xE0042008 0x00001800 0
+
+Debug: 215 116 command.c:155 script_debug(): command - read_memory 0xE0042004 32 1
+Debug: 216 116 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe0042004 4 1
+Debug: 217 117 command.c:155 script_debug(): command - mww 0xE0042004 7
+Debug: 218 117 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0042004 4 1
+Debug: 219 117 command.c:155 script_debug(): command - read_memory 0xE0042008 32 1
+Debug: 220 117 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe0042008 4 1
+Debug: 221 118 command.c:155 script_debug(): command - mww 0xE0042008 6144
+Debug: 222 118 hla_target.c:616 adapter_write_memory(): adapter_write_memory 0xe0042008 4 1
+Debug: 223 118 command.c:155 script_debug(): command - flash init
+Debug: 224 118 tcl.c:1375 handle_flash_init_command(): Initializing flash devices...
+Debug: 225 118 command.c:155 script_debug(): command - nand init
+Debug: 226 118 tcl.c:487 handle_nand_init_command(): Initializing NAND devices...
+Debug: 227 118 command.c:155 script_debug(): command - pld init
+Debug: 228 118 pld.c:194 handle_pld_init_command(): Initializing PLDs...
+Debug: 229 118 command.c:155 script_debug(): command - tpiu init
+Info : 230 118 gdb_server.c:3791 gdb_target_start(): starting gdb server for stm32f4x.cpu on 3333
+Info : 231 118 server.c:297 add_service(): Listening on port 3333 for gdb connections
+Debug: 232 211 hla_target.c:601 adapter_read_memory(): adapter_read_memory 0xe000edf8 4 1
+Debug: 233 211 target.c:2628 target_read_u32(): address: 0xe000edf8, value: 0x00000000
+Debug: 234 212 armv7m.c:368 armv7m_read_core_reg(): read r0 value 0x00000000
+Debug: 235 212 armv7m.c:368 armv7m_read_core_reg(): read r1 value 0x00000000
+Debug: 236 213 armv7m.c:368 armv7m_read_core_reg(): read r2 value 0x00000000
+Debug: 237 213 armv7m.c:368 armv7m_read_core_reg(): read r3 value 0x00000000
+Debug: 238 213 armv7m.c:368 armv7m_read_core_reg(): read r4 value 0x00000000
+Debug: 239 214 armv7m.c:368 armv7m_read_core_reg(): read r5 value 0x00000000
+Debug: 240 214 armv7m.c:368 armv7m_read_core_reg(): read r6 value 0x00000000
+Debug: 241 215 armv7m.c:368 armv7m_read_core_reg(): read r7 value 0x00000000
+Debug: 242 215 armv7m.c:368 armv7m_read_core_reg(): read r8 value 0x00000000
+Debug: 243 216 armv7m.c:368 armv7m_read_core_reg(): read r9 value 0x00000000
+Debug: 244 216 armv7m.c:368 armv7m_read_core_reg(): read r10 value 0x00000000
+Debug: 245 216 armv7m.c:368 armv7m_read_core_reg(): read r11 value 0x00000000
+Debug: 246 217 armv7m.c:368 armv7m_read_core_reg(): read r12 value 0x00000000
+Debug: 247 217 armv7m.c:368 armv7m_read_core_reg(): read sp value 0xffffffd8
+Debug: 248 218 armv7m.c:368 armv7m_read_core_reg(): read lr value 0xfffffff9
+Debug: 249 218 armv7m.c:368 armv7m_read_core_reg(): read pc value 0xfffffffe
+Debug: 250 219 armv7m.c:368 armv7m_read_core_reg(): read xPSR value 0x01000003
+Debug: 251 219 armv7m.c:368 armv7m_read_core_reg(): read msp value 0xffffffd8
+Debug: 252 220 armv7m.c:368 armv7m_read_core_reg(): read psp value 0x00000000
+Debug: 253 220 armv7m.c:368 armv7m_read_core_reg(): read pmsk_bpri_fltmsk_ctrl value 0x00000000
+Debug: 254 221 armv7m.c:366 armv7m_read_core_reg(): read d0 value 0x0000000000000000
+Debug: 255 222 armv7m.c:366 armv7m_read_core_reg(): read d1 value 0x0000000000000000
+Debug: 256 223 armv7m.c:366 armv7m_read_core_reg(): read d2 value 0x0000000000000000
+Debug: 257 223 armv7m.c:366 armv7m_read_core_reg(): read d3 value 0x0000000000000000
+Debug: 258 224 armv7m.c:366 armv7m_read_core_reg(): read d4 value 0x0000000000000000
+Debug: 259 225 armv7m.c:366 armv7m_read_core_reg(): read d5 value 0x0000000000000000
+Debug: 260 226 armv7m.c:366 armv7m_read_core_reg(): read d6 value 0x0000000000000000
+Debug: 261 227 armv7m.c:366 armv7m_read_core_reg(): read d7 value 0x0000000000000000
+Debug: 262 228 armv7m.c:366 armv7m_read_core_reg(): read d8 value 0x0000000000000000
+Debug: 263 228 armv7m.c:366 armv7m_read_core_reg(): read d9 value 0x0000000000000000
+Debug: 264 229 armv7m.c:366 armv7m_read_core_reg(): read d10 value 0x0000000000000000
+Debug: 265 230 armv7m.c:366 armv7m_read_core_reg(): read d11 value 0x0000000000000000
+Debug: 266 231 armv7m.c:366 armv7m_read_core_reg(): read d12 value 0x0000000000000000
+Debug: 267 232 armv7m.c:366 armv7m_read_core_reg(): read d13 value 0x0000000000000000
+Debug: 268 232 armv7m.c:366 armv7m_read_core_reg(): read d14 value 0x0000000000000000
+Debug: 269 233 armv7m.c:366 armv7m_read_core_reg(): read d15 value 0x0000000000000000
+Debug: 270 234 armv7m.c:368 armv7m_read_core_reg(): read fpscr value 0x00000000
+Debug: 271 234 hla_target.c:278 adapter_debug_entry(): entered debug state in core mode: Handler at PC 0xfffffffe, target->state: halted
+Debug: 272 234 target.c:1843 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f4x.cpu
+Debug: 273 234 target.c:1843 target_call_event_callbacks(): target event 1 (halted) for core stm32f4x.cpu
+User : 274 234 armv7m.c:738 armv7m_arch_state(): [stm32f4x.cpu] halted due to breakpoint, current mode: Handler HardFault
+xPSR: 0x01000003 pc: 0xfffffffe msp: 0xffffffd8
+Debug: 275 234 hla_target.c:323 adapter_poll(): halted: PC: 0xfffffffe
