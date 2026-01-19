@@ -1,17 +1,17 @@
 #include "../include/main.h"
 
-#include "stm32f4xx.h"
-#define GPIOAEN (1U<<0)
-#define PIN5 (1U<<5)
-#define LED_PIN PIN5
-int main(void)
-{
-  RCC->AHB1ENR |= GPIOAEN;
-  GPIOA->MODER |= (1U<<10);
-  GPIOA->MODER &= ~(1U<<11);
-  while(1)
-  {
-    GPIOA->ODR^= LED_PIN;
-    for(int i=0;i<100000;i++){}
+int main(void) {
+  // Enable clock access to GPIOA
+  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+
+  // Set GPIOA Pin 5 mode to output (01)
+  GPIOA->MODER |= GPIO_MODER_MODER5_0;
+  GPIOA->MODER &= ~GPIO_MODER_MODER5_1;
+
+  // Superloop
+  while (1) {
+    // Set PA5 (LED Pin) to high
+    GPIOA->ODR ^= GPIO_ODR_OD5;
+		for(int i = 0; i < 100000; i++){}
   }
 }
