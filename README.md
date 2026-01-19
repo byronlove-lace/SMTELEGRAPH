@@ -7,7 +7,7 @@ The NUCLEO STM32F411RE has multiple LEDs that can function as a reciever for mor
 
 I've used lua to create a command line tool that will take a user's input, converts it to morse, appends start and end transmission signal (as per the ITU-R M.1677-1 International Morse Code Standard) and then converts said morse into an array of integers that that the STM32 can iterate over in a loop. I have also made an additional script that generates a header file with this array.
 
-At the moment, I have a LED toggle that uses the CMSIS as proof of concept, hover I plan on using the HAL for more robust code (and because it makes managing time much easier).
+At the moment, I have a LED toggle that uses the CMSIS as proof of concept, however I plan on using the HAL for more robust code (and because it makes managing time much easier).
 
 ## PROJECT ROADMAP
 
