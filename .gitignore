@@ -12,6 +12,7 @@ notes
 obj
 bin
 .env
-.bak
+*.bak
 debug
 debug.md
+logs
