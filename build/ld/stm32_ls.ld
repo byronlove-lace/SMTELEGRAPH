@@ -1,4 +1,3 @@
-
 ENTRY(Reset_Handler)
 
 /* Available Memory */
@@ -25,7 +24,7 @@ SECTIONS
     *(.text)
     *(.rodata)
     . = ALIGN(4);
-    _etext = .; /*global symbold for end of text section*/
+    _etext = .; /*global symbol for end of text section*/
   }>FLASH
 
   .data :

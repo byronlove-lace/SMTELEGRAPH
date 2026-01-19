@@ -14,3 +14,4 @@ bin
 .env
 .bak
 debug
+debug.md
