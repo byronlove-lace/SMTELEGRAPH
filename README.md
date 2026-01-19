@@ -1,9 +1,9 @@
-# SMTELEGRAPH
+# STELEGRAPH
 
 ## DESCRIPTION
 
-This project aims to program an NUCLEO SMT32F411RE MCU to function as a telegraph for morse code.
-The NUCLEO SMT32F411RE has multiple LEDs that can function as a reciever for morse code and it has two buttons that can serve as an input.
+This project aims to program an NUCLEO STM32F411RE MCU to function as a telegraph for morse code.
+The NUCLEO STM32F411RE has multiple LEDs that can function as a reciever for morse code and it has two buttons that can serve as an input.
 
 I've used lua to create a command line tool that will take a user's input, converts it to morse, appends start and end transmission signal (as per the ITU-R M.1677-1 International Morse Code Standard) and then converts said morse into an array of integers that that the STM32 can iterate over in a loop. I have also made an additional script that generates a header file with this array.
 
@@ -24,7 +24,3 @@ To keep the repository small, I only track symlinks to the headers we actually u
 After cloning the repository for the first time, run the following script to fetch the library and initialize its submodules:
 
 _scripts/init_submodules.sh_
-
-```
-
-```
