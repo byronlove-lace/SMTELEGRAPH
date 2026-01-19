@@ -1,4 +1,9 @@
 # CONFIGS
+## Logger Settings
+TIMESTAMP := $(shell date +"%Y%m%d_%H%M%S")
+OPENOCD_LOG = logs/$(TIMESTAMP)_openocd.log
+GDB_LOG = logs/$(TIMESTAMP)_gdb.log
+
 ## Compiler Settings
 CC = arm-none-eabi-gcc
 CFLAGS = -c -mcpu=cortex-m4 -mthumb -std=gnu11 -Wall -Wextra
@@ -28,10 +33,10 @@ BOARD=board/st_nucleo_f4.cfg
 build: $(TARGET_ELF)
 
 load:
-	openocd -d -f $(DEBUGGER) -f $(BOARD) | tee logs/openocd.log
+	openocd -d -f $(DEBUGGER) -f $(BOARD) 2>&1 | tee $(OPENOCD_LOG)
 
 debug:
-	gdb -ex "target extended-remote :3333" $(TARGET_ELF)
+	gdb -ex "target extended-remote :3333" $(TARGET_ELF) 2>&1 | tee $(GDB_LOG)
 
 clean:
 	rm -f $(STARTUP_OBJ) $(MAIN_OBJ) $(MAIN_MAP) $(TARGET_ELF)
