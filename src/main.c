@@ -1,17 +1,14 @@
-#include "../include/main.h"
+#include "../include/gpio.h"
 
 int main(void) {
-  // Enable clock access to GPIOA
-  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-
-  // Set GPIOA Pin 5 mode to output (01)
-  GPIOA->MODER |= GPIO_MODER_MODER5_0;
-  GPIOA->MODER &= ~GPIO_MODER_MODER5_1;
+  // Initialise LED
+  led_init();
 
   // Superloop
   while (1) {
-    // Set PA5 (LED Pin) to high
-    GPIOA->ODR ^= GPIO_ODR_OD5;
+    led_on();
+		for(int i = 0; i < 100000; i++){}
+    led_off();
 		for(int i = 0; i < 100000; i++){}
   }
 }
