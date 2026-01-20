@@ -1,17 +1,23 @@
-#include "../include/main.h"
+#include "../include/gpio.h"
+
+bool btn_state;
 
 int main(void) {
-  // Enable clock access to GPIOA
-  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+  // Initialise LED
+  led_init();
 
-  // Set GPIOA Pin 5 mode to output (01)
-  GPIOA->MODER |= GPIO_MODER_MODER5_0;
-  GPIOA->MODER &= ~GPIO_MODER_MODER5_1;
+  // Initialise Button
+  btn_init();
 
   // Superloop
   while (1) {
-    // Set PA5 (LED Pin) to high
-    GPIOA->ODR ^= GPIO_ODR_OD5;
-		for(int i = 0; i < 100000; i++){}
+    // Check if button is pushed
+    btn_state = get_btn_state();
+
+    if (btn_state) {
+    led_on();
+    } else {
+      led_off();
+    }
   }
 }
