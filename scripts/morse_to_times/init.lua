@@ -25,11 +25,12 @@ local main = function()
 	end
 	local morse_table = json.decode(json_data)
 
+	local speed = transmission.setSpeed(WPM)
 	local trans_times = {
-		start = transmission.getTimes(WPM, transmission.start(morse_table)),
-		body = transmission.getTimes(WPM, transmission.body(args[1], morse_table)),
-		loop = transmission.getTimes(WPM, transmission.loop(morse_table)),
-		fin = transmission.getTimes(WPM, transmission.fin(morse_table)),
+		start = transmission.getTimes(speed, transmission.start(morse_table)),
+		body = transmission.getTimes(speed, transmission.body(args[1], morse_table)),
+		loop = transmission.getTimes(speed, transmission.loop(morse_table)),
+		fin = transmission.getTimes(speed, transmission.fin(morse_table)),
 	}
 
 	local h_dest = getScriptDir() .. "../../include/transmission_timings.h"
