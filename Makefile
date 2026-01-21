@@ -24,6 +24,8 @@ GPIO_SRC = src/gpio.c
 GPIO_OBJ = build/obj/gpio.o
 SYSTICK_SRC = src/systick.c
 SYSTICK_OBJ = build/obj/systick.o
+TRANSMISSION_SRC = src/transmission_timings.c
+TRANSMISSION_OBJ = build/obj/transmission.o
 
 ## Bin + Elf Paths
 TARGET_ELF = bin/main.elf
@@ -59,6 +61,9 @@ $(GPIO_OBJ) : $(GPIO_SRC)
 $(SYSTICK_OBJ) : $(SYSTICK_SRC)
 	$(CC) $(CFLAGS) $< -o $@
 
+$(TRANSMISSION_OBJ) : $(TRANSMISSION_SRC)
+	$(CC) $(CFLAGS) $< -o $@
+
 ## Link
-$(TARGET_ELF) : $(STARTUP_OBJ) $(GPIO_OBJ) $(SYSTICK_OBJ) $(MAIN_OBJ)
+$(TARGET_ELF) : $(STARTUP_OBJ) $(GPIO_OBJ) $(SYSTICK_OBJ) $(TRANSMISSION_OBJ) $(MAIN_OBJ)
 	$(CC) $(LDFLAGS) $^ -o $@
