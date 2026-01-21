@@ -1,4 +1,4 @@
-#include "../include/morse_timings.h"
+#include "../include/transmission_timings.h"
 
 const uint32_t T_START_SIZE = 10;
 const elem_timing t_start[] = {
