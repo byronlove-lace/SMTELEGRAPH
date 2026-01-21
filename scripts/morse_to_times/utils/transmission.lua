@@ -46,9 +46,17 @@ function transmission.setSpeed(wpm)
 end
 
 function transmission.getTimes(ms_per_unit, msg_units)
+	local round = function(num)
+		if num >= 0 then
+			return math.floor(num + 0.5)
+		else
+			return math.ceil(num - 0.5)
+		end
+	end
+
 	local scaled = {}
 	for i, tbl in ipairs(msg_units) do
-		scaled[i] = { on = tbl.on, duration = tbl.units * ms_per_unit }
+		scaled[i] = { on = tbl.on, duration = round(tbl.units * ms_per_unit) }
 	end
 	return scaled
 end
