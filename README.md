@@ -17,8 +17,6 @@ I've used lua to create a command line tool that will take a user's input, conve
 
 ## NOTE ON VENDOR LIBRARY
 
-This project uses the STM32CubeF4 library from ST as a submodule.
-To keep the repository small, I only track symlinks to the headers we actually use.
-After cloning the repository for the first time, run the following script to fetch the library and initialize its submodules:
+This project uses the STM32CubeF4 library from ST as a submodule. To keep the repository small, I only track symlinks to the include directories we actually use. After cloning the repository for the first time, run the following script to fetch the library and initialize its submodules:
 
 _scripts/init_submodules.sh_
