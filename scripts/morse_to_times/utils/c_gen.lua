@@ -30,7 +30,7 @@ end
 
 function c_gen.src(t)
 	local c_buff = ""
-	c_buff = c_buff .. '#include "../include/morse_timings.h"\n\n'
+	c_buff = c_buff .. '#include "../include/transmission.h"\n\n'
 
 	c_buff = c_buff .. "const uint32_t T_START_SIZE = " .. #t.start .. ";\n"
 	c_buff = c_buff .. "const elem_timing t_start[] = {\n"
