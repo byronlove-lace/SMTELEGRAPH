@@ -1,5 +1,5 @@
-local morse = require("morse")
-local str_mod = require("str_mod")
+local morse = require("utils.morse")
+local str_mod = require("utils.str_mod")
 
 local transmission = {}
 

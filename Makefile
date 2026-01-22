@@ -24,7 +24,7 @@ GPIO_SRC = src/gpio.c
 GPIO_OBJ = build/obj/gpio.o
 SYSTICK_SRC = src/systick.c
 SYSTICK_OBJ = build/obj/systick.o
-TRANSMISSION_SRC = src/transmission_timings.c
+TRANSMISSION_SRC = src/transmission.c
 TRANSMISSION_OBJ = build/obj/transmission.o
 
 ## Bin + Elf Paths
@@ -45,7 +45,7 @@ debug:
 	gdb -ex "target extended-remote :3333" $(TARGET_ELF) 2>&1 | tee $(GDB_LOG)
 
 clean:
-	rm -f $(STARTUP_OBJ) $(MAIN_OBJ) $(MAIN_MAP) $(TARGET_ELF)
+	rm -f $(STARTUP_OBJ) $(TRANSMISSION_OBJ) $(MAIN_OBJ) $(MAIN_MAP) $(TARGET_ELF)
 
 # BUILD
 ## Compile
