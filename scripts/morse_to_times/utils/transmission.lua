@@ -1,10 +1,5 @@
-local getScriptDir = function()
-	local str = debug.getinfo(2, "S").source:sub(2)
-	return str:match("(.*/)") or "./"
-end
-
-local morse = require(getScriptDir() .. "morse")
-local str_mod = require(getScriptDir() .. "str_mod")
+local morse = require("morse")
+local str_mod = require("str_mod")
 
 local transmission = {}
 

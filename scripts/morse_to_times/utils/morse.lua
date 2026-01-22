@@ -2,6 +2,7 @@ local morse = {}
 
 function morse.encode(str_tbl, morse_map)
 	local encoded = {}
+	assert(type(morse_map) == "table", "\nERROR: Morse map of type table required.")
 
 	for _, char in ipairs(str_tbl) do
 		if char == " " then
