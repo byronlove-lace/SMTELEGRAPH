@@ -8,7 +8,7 @@ local getScriptDir = function()
 	return str:match("(.*/)") or "./"
 end
 
-local WPM = 10
+local WPM = 1
 
 local args = { ... }
 if not args[1] then
@@ -32,14 +32,14 @@ local main = function()
 		fin = transmission.getTimes(speed, transmission.fin(morse_table)),
 	}
 
-	local h_dest = getScriptDir() .. "../../include/transmission_timings.h"
+	local h_dest = getScriptDir() .. "../../include/transmission.h"
 	local success = file_io.write(h_dest, c_gen.header())
 	if success == 1 then
 		print("Failed to write header file.")
 		os.exit(1)
 	end
 
-	local c_dest = getScriptDir() .. "../../src/transmission_timings.c"
+	local c_dest = getScriptDir() .. "../../src/transmission.c"
 	success = file_io.write(c_dest, c_gen.src(trans_times))
 	if success == 1 then
 		print("Failed to write src file.")
