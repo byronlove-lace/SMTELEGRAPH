@@ -1,15 +1,14 @@
--- pathing relative to this file
+local json = require("lib/json")
+local file_io = require("utils.file_io")
+local transmission = require("utils.transmission")
+local c_gen = require("utils.c_gen")
+
 local getScriptDir = function()
 	local str = debug.getinfo(2, "S").source:sub(2)
 	return str:match("(.*/)") or "./"
 end
 
-local json = require(getScriptDir() .. "lib/json")
-local file_io = require(getScriptDir() .. "utils/file_io")
-local transmission = require(getScriptDir() .. "utils/transmission")
-local c_gen = require(getScriptDir() .. "utils/c_gen")
-
-local WPM = 25
+local WPM = 10
 
 local args = { ... }
 if not args[1] then
