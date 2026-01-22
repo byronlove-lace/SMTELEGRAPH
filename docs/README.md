@@ -11,8 +11,7 @@ At the moment, I have a LED toggle that uses the CMSIS as proof of concept, hove
 
 ## PROJECT ROADMAP
 
-- MCU succuesfully reads lua generated files and outputs correct morse transmission.
-- Configure lua script to take different Words Per Minute (WPM) metrics as this is the standard measurement of speed in morse.
+- Add testing for led output.
 - Configure the MCU to function as an input for morse code with a client for translating the code on host.
 - Add a porentiometer to the board to set WPM with one of the LEDs serving as a measure (unused button causes unused led to blink: 10WPM per blink).
 
