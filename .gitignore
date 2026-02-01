@@ -3,8 +3,8 @@ lib
 books
 examples
 misc
-docs/notes
-!uart.md
+docs/notes/*
+!docs/notes/uart_notes.md
 .clangd
 *.elf
 *.bin
