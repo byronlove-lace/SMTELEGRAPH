@@ -5,6 +5,7 @@ examples
 misc
 docs/notes/*
 !docs/notes/uart_notes.md
+!docs/notes/clock_notes.md
 .clangd
 *.elf
 *.bin
@@ -14,6 +15,7 @@ docs/notes/*
 obj
 bin
 *.bak
+!src/main.bak
 debug
 debug.md
 logs
