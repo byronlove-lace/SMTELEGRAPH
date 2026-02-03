@@ -14,8 +14,10 @@ I've used lua to create a command line tool that will take a user's input, conve
 - Configure the MCU button to function as an input for morse code
 - Configure USART for MCU to PC client communication
 - Configure USART to use interrupts for bidirectional commmuncation
-- Move morse decoding/encoding logic to the board
+- Add USART error handling
+- Move all morse decoding/encoding logic to the board
 - Dynamic encoding (i.e. typing morse fast increases wpm, slow decreases wpm. Same wpm used to decode incoming communication from pc client).
+- Add morse compatability type enforcement on pc client
 - Add audio and TCP/IP functionality and orchistrate via RTOS
 
 ## NOTE ON VENDOR LIBRARY
